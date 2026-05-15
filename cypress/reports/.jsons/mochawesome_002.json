@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-15T14:19:24.913Z",
+    "end": "2026-05-15T14:19:26.841Z",
+    "duration": 1928,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b1faa15-9622-4629-9499-98c21bf9ca24",
+      "title": "",
+      "fullFile": "cypress\\e2e\\03-campanha.cy.js",
+      "file": "cypress\\e2e\\03-campanha.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87499acb-9e2a-4969-a056-c799a564f08f",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina de campanha",
+              "fullTitle": "Dashboard Acessar pagina de campanha",
+              "timedOut": null,
+              "duration": 999,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_campanha.default.verifyURL();",
+              "err": {},
+              "uuid": "c657480c-5e67-46e8-8b9a-93141979e8c1",
+              "parentUUID": "87499acb-9e2a-4969-a056-c799a564f08f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar itens de menu internos",
+              "fullTitle": "Dashboard Validar itens de menu internos",
+              "timedOut": null,
+              "duration": 891,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_campanha.default.verifyMenuItems();",
+              "err": {},
+              "uuid": "fa913f0c-6971-4611-84f8-4c37ed43bc59",
+              "parentUUID": "87499acb-9e2a-4969-a056-c799a564f08f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c657480c-5e67-46e8-8b9a-93141979e8c1",
+            "fa913f0c-6971-4611-84f8-4c37ed43bc59"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1890,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 19,
+    "passes": 13,
+    "pending": 0,
+    "failures": 6,
+    "testsRegistered": 19,
+    "passPercent": 68.42105263157895,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-05-15T14:18:58.907Z",
+    "end": "2026-05-15T14:19:50.413Z",
+    "duration": 51506
+  },
+  "results": [
+    {
+      "uuid": "735aaa8f-fa98-42e5-8206-218925d63490",
+      "title": "",
+      "fullFile": "cypress\\e2e\\02-dashboard.cy.js",
+      "file": "cypress\\e2e\\02-dashboard.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eff00a90-33c6-4d18-a008-236e6707a201",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar avatar do usuario",
+              "fullTitle": "Dashboard Validar avatar do usuario",
+              "timedOut": null,
+              "duration": 5029,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\02-dashboard.cy.js\\\\Dashboard -- Validar avatar do usuario (failed).png\"\n    ]\n  ]\n}",
+              "code": "const userAvatar = 'https://url.inventada/';\n// Assert\n_header.default.verifyUserAvatar(userAvatar);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<button.ml-3.flex.items-center.gap-3>' to have attribute 'href'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<button.ml-3.flex.items-center.gap-3>' to have attribute 'href'\n    at Header.verifyUserAvatar (webpack://teste-colmeia-qa/./cypress/pages/header/index.js:6:49)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/02-dashboard.cy.js:19:15)",
+                "diff": null
+              },
+              "uuid": "426da48a-45b6-4d9b-904f-3abe6ded7462",
+              "parentUUID": "eff00a90-33c6-4d18-a008-236e6707a201",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar nome do usuario",
+              "fullTitle": "Dashboard Validar nome do usuario",
+              "timedOut": null,
+              "duration": 688,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userName = 'Candidato';\n// Assert\n_header.default.verifyUserName(userName);",
+              "err": {},
+              "uuid": "92f5dd93-187e-4ef3-ac41-8a1cc5189768",
+              "parentUUID": "eff00a90-33c6-4d18-a008-236e6707a201",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Abrir menu do usuario",
+              "fullTitle": "Dashboard Abrir menu do usuario",
+              "timedOut": null,
+              "duration": 4881,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\02-dashboard.cy.js\\\\Dashboard -- Abrir menu do usuario (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Act\n_header.default.activateUserMenu();\n// Assert\n_header.default.verifyElementsUserMenu();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<button.ml-3.flex.items-center.gap-3>' not to be 'visible'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<button.ml-3.flex.items-center.gap-3>' not to be 'visible'\n    at Header.verifyElementsUserMenu (webpack://teste-colmeia-qa/./cypress/pages/header/index.js:16:28)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/02-dashboard.cy.js:34:15)",
+                "diff": null
+              },
+              "uuid": "8c7baf6a-66f2-4ce7-b6d4-c741a7526a5f",
+              "parentUUID": "eff00a90-33c6-4d18-a008-236e6707a201",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Acessar pagina de dashboard",
+              "fullTitle": "Dashboard Acessar pagina de dashboard",
+              "timedOut": null,
+              "duration": 713,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_dashboard.default.checkURL();",
+              "err": {},
+              "uuid": "86a125d6-7e35-4b61-b86e-529db2a6b2f2",
+              "parentUUID": "eff00a90-33c6-4d18-a008-236e6707a201",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar dashboard",
+              "fullTitle": "Dashboard Validar dashboard",
+              "timedOut": null,
+              "duration": 4798,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\02-dashboard.cy.js\\\\Dashboard -- Validar dashboard (failed).png\"\n    ]\n  ]\n}",
+              "code": "const dashboardTitle = 'Dashboard';\n// Assert\n//TODO REFAZER TESTE APOS [JIRA-004]\n_dashboard.default.verifyDashboard(dashboardTitle);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.\n    at Dashboard.verifyDashboard (webpack://teste-colmeia-qa/./cypress/pages/dashboard/index.js:9:11)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/02-dashboard.cy.js:48:18)",
+                "diff": null
+              },
+              "uuid": "019a33d1-1a86-4c7a-b165-cf24eae7d43f",
+              "parentUUID": "eff00a90-33c6-4d18-a008-236e6707a201",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92f5dd93-187e-4ef3-ac41-8a1cc5189768",
+            "86a125d6-7e35-4b61-b86e-529db2a6b2f2"
+          ],
+          "failures": [
+            "426da48a-45b6-4d9b-904f-3abe6ded7462",
+            "8c7baf6a-66f2-4ce7-b6d4-c741a7526a5f",
+            "019a33d1-1a86-4c7a-b165-cf24eae7d43f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16109,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2b1faa15-9622-4629-9499-98c21bf9ca24",
+      "title": "",
+      "fullFile": "cypress\\e2e\\03-campanha.cy.js",
+      "file": "cypress\\e2e\\03-campanha.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87499acb-9e2a-4969-a056-c799a564f08f",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina de campanha",
+              "fullTitle": "Dashboard Acessar pagina de campanha",
+              "timedOut": null,
+              "duration": 999,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_campanha.default.verifyURL();",
+              "err": {},
+              "uuid": "c657480c-5e67-46e8-8b9a-93141979e8c1",
+              "parentUUID": "87499acb-9e2a-4969-a056-c799a564f08f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar itens de menu internos",
+              "fullTitle": "Dashboard Validar itens de menu internos",
+              "timedOut": null,
+              "duration": 891,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_campanha.default.verifyMenuItems();",
+              "err": {},
+              "uuid": "fa913f0c-6971-4611-84f8-4c37ed43bc59",
+              "parentUUID": "87499acb-9e2a-4969-a056-c799a564f08f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c657480c-5e67-46e8-8b9a-93141979e8c1",
+            "fa913f0c-6971-4611-84f8-4c37ed43bc59"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1890,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8452eeb1-d92b-4d08-a93e-3ad23a71a133",
+      "title": "",
+      "fullFile": "cypress\\e2e\\04-bancos-de-dados.cy.js",
+      "file": "cypress\\e2e\\04-bancos-de-dados.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+          "title": "Bancos de Dados",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina Bancos de Dados",
+              "fullTitle": "Bancos de Dados Acessar pagina Bancos de Dados",
+              "timedOut": null,
+              "duration": 1075,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_bancosDeDados.default.verifyURL();",
+              "err": {},
+              "uuid": "fc5a7c0e-4eea-4d92-b553-2f8d77fd9d0f",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica carregamento das informacoes",
+              "fullTitle": "Bancos de Dados Verifica carregamento das informacoes",
+              "timedOut": null,
+              "duration": 850,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_bancosDeDados.default.verifyContent();",
+              "err": {},
+              "uuid": "02a2b806-c4d6-47e0-8014-59bd6b521720",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Criar novo item",
+              "fullTitle": "Bancos de Dados Criar novo item",
+              "timedOut": null,
+              "duration": 1125,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItem = 'Teste';\n// Act\n_bancosDeDados.default.createItem(nameItem);\n// Assert\n_bancosDeDados.default.verifyBaseItem(nameItem);",
+              "err": {},
+              "uuid": "21456b27-b7d7-4a33-93b3-a1f4b3f471fc",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Arquivar item",
+              "fullTitle": "Bancos de Dados Arquivar item",
+              "timedOut": null,
+              "duration": 5399,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\04-bancos-de-dados.cy.js\\\\Bancos de Dados -- Arquivar item (failed).png\"\n    ]\n  ]\n}",
+              "code": "const nameItem = 'Teste';\n// Act\n_bancosDeDados.default.createItem(nameItem);\n_bancosDeDados.default.archiveItem(nameItem);\n// Assert\n//TODO REVALIDAR APOS [JIRA-00x]\n_bancosDeDados.default.verifyArchivedItem(nameItem);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Teste' within the selector: 'td' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Teste' within the selector: 'td' but never did.\n    at BancosDeDados.verifyArchivedItem (webpack://teste-colmeia-qa/./cypress/pages/dashboard/campanha/bancos-de-dados/index.js:25:36)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/04-bancos-de-dados.cy.js:47:22)",
+                "diff": null
+              },
+              "uuid": "a4ce95bf-408a-4760-8425-ddcbb4c5e64a",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Apagar item",
+              "fullTitle": "Bancos de Dados Apagar item",
+              "timedOut": null,
+              "duration": 1864,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst itemToBeDeleted = 1; //ou seja posicao 2 do array\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.deleteItem(nameItems[itemToBeDeleted]);\n// Assert\n_bancosDeDados.default.verifyDeletedItem(nameItems[itemToBeDeleted]);",
+              "err": {},
+              "uuid": "aa4c8e1f-7943-41ec-a84d-2cdc1dea5738",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquisar item existente",
+              "fullTitle": "Bancos de Dados Pesquisar item existente",
+              "timedOut": null,
+              "duration": 2021,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst searchedItem = 2; //ou seja posicao 3 do array\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.searchItem(nameItems[searchedItem]);\n// Assert\n_bancosDeDados.default.verifyBaseItem(nameItems[searchedItem]);",
+              "err": {},
+              "uuid": "6864ebc7-8fec-4c70-9efd-f790308d2bd9",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquisar item nao existente",
+              "fullTitle": "Bancos de Dados Pesquisar item nao existente",
+              "timedOut": null,
+              "duration": 2045,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst nonExistentItem = 'Teste XPTO';\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.searchItem(nonExistentItem);\n// Assert\n_bancosDeDados.default.verifyUnfoundedItem(nonExistentItem);",
+              "err": {},
+              "uuid": "60e0f71e-6aea-4133-a54b-389622c5dd94",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc5a7c0e-4eea-4d92-b553-2f8d77fd9d0f",
+            "02a2b806-c4d6-47e0-8014-59bd6b521720",
+            "21456b27-b7d7-4a33-93b3-a1f4b3f471fc",
+            "aa4c8e1f-7943-41ec-a84d-2cdc1dea5738",
+            "6864ebc7-8fec-4c70-9efd-f790308d2bd9",
+            "60e0f71e-6aea-4133-a54b-389622c5dd94"
+          ],
+          "failures": [
+            "a4ce95bf-408a-4760-8425-ddcbb4c5e64a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "af2d1dd1-355d-4305-ab0f-7741d3f1a1d7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\05-colmeia-forms.cy.js",
+      "file": "cypress\\e2e\\05-colmeia-forms.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+          "title": "Comeia Forms",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina Colmeia Forms",
+              "fullTitle": "Comeia Forms Acessar pagina Colmeia Forms",
+              "timedOut": null,
+              "duration": 1235,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_colmeiaForms.default.verifyURL();",
+              "err": {},
+              "uuid": "915aa1cd-fbd6-47f0-b2a9-7171a60868d0",
+              "parentUUID": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica carregamento das informacoes",
+              "fullTitle": "Comeia Forms Verifica carregamento das informacoes",
+              "timedOut": null,
+              "duration": 4941,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\05-colmeia-forms.cy.js\\\\Comeia Forms -- Verifica carregamento das informacoes (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Assert\n_colmeiaForms.default.verifyContent();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Colmeia Forms' within the selector: 'h2' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Colmeia Forms' within the selector: 'h2' but never did.\n    at ColmeiaForms.verifyContent (webpack://teste-colmeia-qa/./cypress/pages/dashboard/campanha/colmeia-forms/index.js:8:36)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/05-colmeia-forms.cy.js:27:21)",
+                "diff": null
+              },
+              "uuid": "c7139d19-b44a-426e-8617-cecfb56ff767",
+              "parentUUID": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "915aa1cd-fbd6-47f0-b2a9-7171a60868d0"
+          ],
+          "failures": [
+            "c7139d19-b44a-426e-8617-cecfb56ff767"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "d9c8beaf-dee1-475b-9f34-45f347a5ca42",
+      "title": "",
+      "fullFile": "cypress\\e2e\\01-login.cy.js",
+      "file": "cypress\\e2e\\01-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar login com usuario e senha corretos",
+              "fullTitle": "Login Realizar login com usuario e senha corretos",
+              "timedOut": null,
+              "duration": 5410,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\01-login.cy.js\\\\Login -- Realizar login com usuario e senha corretos (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Act\n_login.default.submitLogin(correctUsername, correctPassword);\n// Assert\n//TODO REVALIDAR APOS [JIRA-001]\n_dashboard.default.checkURL();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://teste-colmeia-qa.colmeia-corp.com/' to equal 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://teste-colmeia-qa.colmeia-corp.com/' to equal 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'\n    at Dashboard.checkURL (webpack://teste-colmeia-qa/./cypress/pages/dashboard/index.js:5:17)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/01-login.cy.js:23:18)",
+                "diff": "- 'https://teste-colmeia-qa.colmeia-corp.com/'\n+ 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'\n"
+              },
+              "uuid": "b93496ff-ea56-46b0-9517-8cb6c5ecb27c",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar login com usuario incorreto",
+              "fullTitle": "Login Realizar login com usuario incorreto",
+              "timedOut": null,
+              "duration": 784,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\n_login.default.submitLogin(nonExistentUsername, correctPassword);\n// Assert\n_login.default.verifyWrongLogin();",
+              "err": {},
+              "uuid": "e3ab1516-11d3-4d58-98a3-2a700ccbe894",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar login com senha incorreta",
+              "fullTitle": "Login Realizar login com senha incorreta",
+              "timedOut": null,
+              "duration": 661,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\n_login.default.submitLogin(correctUsername, wrongPassword);\n// Assert\n_login.default.verifyWrongLogin();\n//Devemos exibir a mensagem nos 2 campos para nao demonstrar que aquele usuario existe para um hacker",
+              "err": {},
+              "uuid": "46104eb1-23f5-43c2-a95c-da85a6b5f9b2",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e3ab1516-11d3-4d58-98a3-2a700ccbe894",
+            "46104eb1-23f5-43c2-a95c-da85a6b5f9b2"
+          ],
+          "failures": [
+            "b93496ff-ea56-46b0-9517-8cb6c5ecb27c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

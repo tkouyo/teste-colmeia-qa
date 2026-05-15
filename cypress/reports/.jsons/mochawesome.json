@@ -1,0 +1,153 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-15T14:18:58.907Z",
+    "end": "2026-05-15T14:19:05.865Z",
+    "duration": 6958,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9c8beaf-dee1-475b-9f34-45f347a5ca42",
+      "title": "",
+      "fullFile": "cypress\\e2e\\01-login.cy.js",
+      "file": "cypress\\e2e\\01-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar login com usuario e senha corretos",
+              "fullTitle": "Login Realizar login com usuario e senha corretos",
+              "timedOut": null,
+              "duration": 5410,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\01-login.cy.js\\\\Login -- Realizar login com usuario e senha corretos (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Act\n_login.default.submitLogin(correctUsername, correctPassword);\n// Assert\n//TODO REVALIDAR APOS [JIRA-001]\n_dashboard.default.checkURL();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://teste-colmeia-qa.colmeia-corp.com/' to equal 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://teste-colmeia-qa.colmeia-corp.com/' to equal 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'\n    at Dashboard.checkURL (webpack://teste-colmeia-qa/./cypress/pages/dashboard/index.js:5:17)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/01-login.cy.js:23:18)",
+                "diff": "- 'https://teste-colmeia-qa.colmeia-corp.com/'\n+ 'https://teste-colmeia-qa.colmeia-corp.com/dashboard'\n"
+              },
+              "uuid": "b93496ff-ea56-46b0-9517-8cb6c5ecb27c",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar login com usuario incorreto",
+              "fullTitle": "Login Realizar login com usuario incorreto",
+              "timedOut": null,
+              "duration": 784,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\n_login.default.submitLogin(nonExistentUsername, correctPassword);\n// Assert\n_login.default.verifyWrongLogin();",
+              "err": {},
+              "uuid": "e3ab1516-11d3-4d58-98a3-2a700ccbe894",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar login com senha incorreta",
+              "fullTitle": "Login Realizar login com senha incorreta",
+              "timedOut": null,
+              "duration": 661,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\n_login.default.submitLogin(correctUsername, wrongPassword);\n// Assert\n_login.default.verifyWrongLogin();\n//Devemos exibir a mensagem nos 2 campos para nao demonstrar que aquele usuario existe para um hacker",
+              "err": {},
+              "uuid": "46104eb1-23f5-43c2-a95c-da85a6b5f9b2",
+              "parentUUID": "2b31d787-bd8a-46a1-b404-3d0dda146885",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e3ab1516-11d3-4d58-98a3-2a700ccbe894",
+            "46104eb1-23f5-43c2-a95c-da85a6b5f9b2"
+          ],
+          "failures": [
+            "b93496ff-ea56-46b0-9517-8cb6c5ecb27c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

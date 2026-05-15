@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-15T14:19:44.169Z",
+    "end": "2026-05-15T14:19:50.413Z",
+    "duration": 6244,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "af2d1dd1-355d-4305-ab0f-7741d3f1a1d7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\05-colmeia-forms.cy.js",
+      "file": "cypress\\e2e\\05-colmeia-forms.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+          "title": "Comeia Forms",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina Colmeia Forms",
+              "fullTitle": "Comeia Forms Acessar pagina Colmeia Forms",
+              "timedOut": null,
+              "duration": 1235,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_colmeiaForms.default.verifyURL();",
+              "err": {},
+              "uuid": "915aa1cd-fbd6-47f0-b2a9-7171a60868d0",
+              "parentUUID": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica carregamento das informacoes",
+              "fullTitle": "Comeia Forms Verifica carregamento das informacoes",
+              "timedOut": null,
+              "duration": 4941,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\05-colmeia-forms.cy.js\\\\Comeia Forms -- Verifica carregamento das informacoes (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Assert\n_colmeiaForms.default.verifyContent();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Colmeia Forms' within the selector: 'h2' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Colmeia Forms' within the selector: 'h2' but never did.\n    at ColmeiaForms.verifyContent (webpack://teste-colmeia-qa/./cypress/pages/dashboard/campanha/colmeia-forms/index.js:8:36)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/05-colmeia-forms.cy.js:27:21)",
+                "diff": null
+              },
+              "uuid": "c7139d19-b44a-426e-8617-cecfb56ff767",
+              "parentUUID": "5b93d316-0dac-4e8f-9c83-b88de0236795",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "915aa1cd-fbd6-47f0-b2a9-7171a60868d0"
+          ],
+          "failures": [
+            "c7139d19-b44a-426e-8617-cecfb56ff767"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

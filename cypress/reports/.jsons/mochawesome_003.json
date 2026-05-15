@@ -1,0 +1,229 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-15T14:19:28.222Z",
+    "end": "2026-05-15T14:19:42.805Z",
+    "duration": 14583,
+    "testsRegistered": 7,
+    "passPercent": 85.71428571428571,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8452eeb1-d92b-4d08-a93e-3ad23a71a133",
+      "title": "",
+      "fullFile": "cypress\\e2e\\04-bancos-de-dados.cy.js",
+      "file": "cypress\\e2e\\04-bancos-de-dados.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+          "title": "Bancos de Dados",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar pagina Bancos de Dados",
+              "fullTitle": "Bancos de Dados Acessar pagina Bancos de Dados",
+              "timedOut": null,
+              "duration": 1075,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_bancosDeDados.default.verifyURL();",
+              "err": {},
+              "uuid": "fc5a7c0e-4eea-4d92-b553-2f8d77fd9d0f",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica carregamento das informacoes",
+              "fullTitle": "Bancos de Dados Verifica carregamento das informacoes",
+              "timedOut": null,
+              "duration": 850,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert\n_bancosDeDados.default.verifyContent();",
+              "err": {},
+              "uuid": "02a2b806-c4d6-47e0-8014-59bd6b521720",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Criar novo item",
+              "fullTitle": "Bancos de Dados Criar novo item",
+              "timedOut": null,
+              "duration": 1125,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItem = 'Teste';\n// Act\n_bancosDeDados.default.createItem(nameItem);\n// Assert\n_bancosDeDados.default.verifyBaseItem(nameItem);",
+              "err": {},
+              "uuid": "21456b27-b7d7-4a33-93b3-a1f4b3f471fc",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Arquivar item",
+              "fullTitle": "Bancos de Dados Arquivar item",
+              "timedOut": null,
+              "duration": 5399,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\04-bancos-de-dados.cy.js\\\\Bancos de Dados -- Arquivar item (failed).png\"\n    ]\n  ]\n}",
+              "code": "const nameItem = 'Teste';\n// Act\n_bancosDeDados.default.createItem(nameItem);\n_bancosDeDados.default.archiveItem(nameItem);\n// Assert\n//TODO REVALIDAR APOS [JIRA-00x]\n_bancosDeDados.default.verifyArchivedItem(nameItem);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Teste' within the selector: 'td' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Teste' within the selector: 'td' but never did.\n    at BancosDeDados.verifyArchivedItem (webpack://teste-colmeia-qa/./cypress/pages/dashboard/campanha/bancos-de-dados/index.js:25:36)\n    at Context.eval (webpack://teste-colmeia-qa/./cypress/e2e/04-bancos-de-dados.cy.js:47:22)",
+                "diff": null
+              },
+              "uuid": "a4ce95bf-408a-4760-8425-ddcbb4c5e64a",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Apagar item",
+              "fullTitle": "Bancos de Dados Apagar item",
+              "timedOut": null,
+              "duration": 1864,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst itemToBeDeleted = 1; //ou seja posicao 2 do array\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.deleteItem(nameItems[itemToBeDeleted]);\n// Assert\n_bancosDeDados.default.verifyDeletedItem(nameItems[itemToBeDeleted]);",
+              "err": {},
+              "uuid": "aa4c8e1f-7943-41ec-a84d-2cdc1dea5738",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquisar item existente",
+              "fullTitle": "Bancos de Dados Pesquisar item existente",
+              "timedOut": null,
+              "duration": 2021,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst searchedItem = 2; //ou seja posicao 3 do array\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.searchItem(nameItems[searchedItem]);\n// Assert\n_bancosDeDados.default.verifyBaseItem(nameItems[searchedItem]);",
+              "err": {},
+              "uuid": "6864ebc7-8fec-4c70-9efd-f790308d2bd9",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pesquisar item nao existente",
+              "fullTitle": "Bancos de Dados Pesquisar item nao existente",
+              "timedOut": null,
+              "duration": 2045,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nameItems = ['Teste 01', 'Teste 02', 'Teste 03'];\nconst nonExistentItem = 'Teste XPTO';\n// Act\nnameItems.forEach(nameItem => {\n  _bancosDeDados.default.createItem(nameItem);\n});\n_bancosDeDados.default.searchItem(nonExistentItem);\n// Assert\n_bancosDeDados.default.verifyUnfoundedItem(nonExistentItem);",
+              "err": {},
+              "uuid": "60e0f71e-6aea-4133-a54b-389622c5dd94",
+              "parentUUID": "a0d9613b-e62e-4d2f-b43c-0d7b564797ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc5a7c0e-4eea-4d92-b553-2f8d77fd9d0f",
+            "02a2b806-c4d6-47e0-8014-59bd6b521720",
+            "21456b27-b7d7-4a33-93b3-a1f4b3f471fc",
+            "aa4c8e1f-7943-41ec-a84d-2cdc1dea5738",
+            "6864ebc7-8fec-4c70-9efd-f790308d2bd9",
+            "60e0f71e-6aea-4133-a54b-389622c5dd94"
+          ],
+          "failures": [
+            "a4ce95bf-408a-4760-8425-ddcbb4c5e64a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportFilename": "mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}
