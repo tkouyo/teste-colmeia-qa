@@ -14,8 +14,17 @@ Instale dependências:
 ```bash
 npm install
 ```
+## Configuração
+
+- Crie o arquivo .env.qa e/ou .env.dev na raiz do projeto
+```bash
+BASE_URL={{endereco-pagina}}
+USER={{usuario-valido))
+PASSWORD={{senha-usuario}}
+```
 
 ## Execução
+
 - Abrir run interativo (p/ desenvolvimento):
 
 ```bash
