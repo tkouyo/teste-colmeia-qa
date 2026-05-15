@@ -16,7 +16,7 @@ Este documento lista os problemas identificados na aplicação durante a execuç
 | 04 | `/dashboard` | Menu de usuário não está implementado | ❌ |
 (Se 05 for um problema)
 | 05 | `/dashboard/campanha/bancos-de-dados` | Botão arquivar item está removendo itens em vez de arquivar | ❌ |
-(Então 06 tambem é)
+(Então 06 também é)
 | 06 | `/dashboard/campanha/bancos-de-dados` | Permite criar itens com mesmo nome | ❌ |
 (Senão 07 que é)
 | 07 | `/dashboard/campanha/bancos-de-dados` | Botão remover item remove itens com mesmo nome (deve tratar nome como chave única) | ❌ |
