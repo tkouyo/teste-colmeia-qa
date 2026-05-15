@@ -8,7 +8,8 @@ node_modules/
 dist/
 
 # cypress
-
+cypress/reports/
+cypress/screenshots/
 
 #env
 .env.dev
